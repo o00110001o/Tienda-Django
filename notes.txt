@@ -1,0 +1,39 @@
+Notas
+semantica = lo que significa
+sintaxis = como se escribe
+----------------------------------------------------------------------------------------------------------------------
+Recursos de información
+● Authentication vs Authorization: https://www.udacity.com/course/authentication-authorization-oauth--ud330
+● Introducción a Ajax: https://www.udacity.com/course/intro-to-ajax--ud110
+● https://tutorial.djangogirls.org/es/
+● https://www.w3schools.com/html/default.asp
+● https://www.w3schools.com/css/default.asp
+● https://www.w3schools.com/js/default.asp
+● https://www.w3schools.com/jquery/default.asp
+● https://www.w3schools.com/bootstrap/bootstrap_ver.asp
+● https://www.w3schools.com/python/default.asp
+
+----------------------------------------------------------------------------------------------------------------------
+Pluggins
+HTML/CSS/JavaScript Snippets
+
+live server
+html5 - Eno Yao
+Blackbox
+
+----------------------------------------------------------------------------------------------------------------------
+API
+https://rapidapi.com/weatherapi/api/weatherapi-com/
+
+----------------------------------------------------------------------------------------------------------------------
+Ajax
+XML+JavaScript (o Json)= Ajax
+
+AJAX = Asynchronous JavaScript And XML.
+
+Sub-lenguaje
+● AJAX is not a programming language.
+● AJAX is a technique for accessing web servers from a web page.
+● AJAX stands for Asynchronous JavaScript And XML.
+
+----------------------------------------------------------------------------------------------------------------------
