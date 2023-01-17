@@ -26,6 +26,10 @@ API
 https://rapidapi.com/weatherapi/api/weatherapi-com/
 
 ----------------------------------------------------------------------------------------------------------------------
+LIVESHARE
+https://prod.liveshare.vsengsaas.visualstudio.com/join?6FDB1EF9CADBD7D24AA763862BF0C55E18B9
+
+----------------------------------------------------------------------------------------------------------------------
 Ajax
 XML+JavaScript (o Json)= Ajax
 
