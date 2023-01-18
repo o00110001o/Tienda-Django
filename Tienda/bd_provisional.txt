@@ -1,0 +1,16 @@
+from django.db import models
+
+# Create your models here.
+
+class Categoria(models.Models):
+    idCategoria =  models.IntegerField(primary_key = True, verbose_name = "Id de categoria")
+    nombreCategoria = models.CharField(max_length = 50, verbose_name = "Nombre de la categoria")
+    
+    def _str_ (self):
+        return self.nombreCategoria
+
+class Plantas(models.Models):
+    codigo = models.CharField(max_lenth = 6, primary_key = True, verbose_name="Codigo")
+    tipoPlanta = models.CharField(max_lenth = 20, verbose_name="Tipo Planta")
+    precio = models.CharField(max_lenth = 20, verbose_name="precio")
+    modelo = models.CharField(max_lenth = 20, null = True, blanck = True, verbose_name="Patente")
