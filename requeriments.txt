@@ -7,3 +7,4 @@ pymysql
 djangorestframework 
 markdown 
 django-filter
+cx_Oracle
