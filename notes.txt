@@ -37,3 +37,8 @@ Sub-lenguaje
 ● AJAX stands for Asynchronous JavaScript And XML.
 
 ----------------------------------------------------------------------------------------------------------------------
+BD
+alter session set "_ORACLE_SCRIPT" = true;
+create user Plantas identified by plantas;
+grant connect, resource to Plantas;
+alter user Plantas default tablespace users quota unlimited on users;
