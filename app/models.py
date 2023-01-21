@@ -17,7 +17,6 @@ class Planta(models.Model):
     nombrePlanta = models.CharField(max_length = 20, verbose_name="Nombre Planta")
     precio = models.CharField(max_length = 20, null = True, blank = True, verbose_name="Precio") 
     idCategoria = models.ForeignKey('Categoria', verbose_name = "Nombre de la categoria", on_delete = models.CASCADE)
-
     
     def __str__ (self):
         return self.nombrePlanta

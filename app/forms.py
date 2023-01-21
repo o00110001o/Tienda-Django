@@ -6,3 +6,4 @@ class PlantaForm(forms.ModelForm):
     class Meta:
         model = Planta
         fields = '__all__'
+    
