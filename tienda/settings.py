@@ -80,8 +80,8 @@ WSGI_APPLICATION = 'tienda.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/orcl',
-        'USER': 'Plantas',
+        'NAME': '127.0.0.1:1521/xe',
+        'USER': 'Plantas2',
         'PASSWORD': 'plantas',
         'TEST': {
             'USER': 'default_test',
