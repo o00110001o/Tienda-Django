@@ -1,0 +1,72 @@
+views.py
+
+def api(request):
+    return render(request,'api.html')
+
+def carrito(request):
+    return render(request,'carrito.html')
+
+def contacto(request):
+    return render(request,'contacto.html')
+
+def estadopedido(request):
+    return render(request,'estadopedido.html')
+
+def estadopedidoadmin(request):
+    return render(request,'estadopedidoadmin.html')
+
+def estadopedidousuario(request):
+    return render(request,'estadopedidousuario.html')
+
+def formulario(request):
+    return render(request,'formulario.html')
+
+def formularioSuscripcion(request):
+    return render(request,'formularioSuscripcion.html')
+
+def index_formualrioSuscripcion(request):
+    return render(request,'index_formualrioSuscripcion.html')
+
+def index_user(request):
+    return render(request,'index_user.html')
+
+def login(request):
+    return render(request,'login.html')
+
+def productos(request):
+    return render(request,'productos.html')
+
+def registration(request):
+    return render(request,'registration.html')
+
+def suscripcion(request):
+    return render(request,'suscripcion.html')
+
+def terminos_condiciones(request):
+    return render(request,'terminos_condiciones.html')
+
+------------------------------------------------------------------
+urls.py
+
+ path('api', api, name="api"),
+    path('carrito', carrito, name="carrito"),
+    path('contacto', contacto, name="contacto"),
+    path('estadopedido', estadopedido, name="estadopedido"),
+    path('estadopedidoadmin', estadopedidoadmin, name="estadopedidoadmin"),
+    path('estadopedidousuario', estadopedidousuario, name="estadopedidousuario"),
+    path('formulario', formulario, name="formulario"),
+    path('formularioSuscripcion', formularioSuscripcion, name="formularioSuscripcion"),
+    path('index_formualrioSuscripcion', index_formualrioSuscripcion, name="index_formualrioSuscripcion"),
+    path('index_user', index_user, name="index_user"),
+    path('login', login, name="login"),
+    path('productos', productos, name="productos"),
+    path('registration', registration, name="registration"),
+    path('suscripcion', suscripcion, name="suscripcion"),
+    path('terminos_condiciones', terminos_condiciones, name="terminos_condiciones"),
+----------------------------------------------------------------------------------------------
+    
+    stock = models.IntegerField(null = False, blank = True)
+    imagen = models.ImageField(upload_to="productos", null=True)
+    created_at =  models.DateField(auto_now_add=False,default=datetime.utcnow)
+    updated_at =  models.DateField(auto_now=False, default=datetime.utcnow)
+        
