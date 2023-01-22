@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from app.forms import PlantaForm
 from .models import Planta
 
@@ -40,20 +40,22 @@ def modificarPlantas(request, id):
     
     planta = Planta.objects.get(id=id)
     datos = {
-        'form' : PlantaForm()
+        'form' : PlantaForm(instance=planta)
     }
     if request.method == 'POST':
-        formulario = PlantaForm(data=request.POST, files=request.FILES)
+        formulario = PlantaForm(request.POST, instance=planta)
+        
         if formulario.is_valid():
             formulario.save()
             datos['mensaje'] = 'Producto modificado correctamente!'
-            datos['form'] = formulario
 
     return render(request, 'modificarPlantas.html', datos)
 
 # SECCION ELIMINAR
-def eliminarPlantas (request, codigo):
-    producto = Planta.objects.get(codigo=codigo)
-    producto.delete()
+def eliminarPlantas (request, id):
 
-    return render(to = 'listarPlantas.html')
+    planta = Planta.objects.get(id=id)
+
+    planta.delete()
+
+    return redirect (to="../listarPlantas")

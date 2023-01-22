@@ -13,11 +13,10 @@ class Categoria(models.Model):
         return self.nombreCategoria
 
 class Planta(models.Model):
-    codigo = models.CharField(max_length = 6, primary_key = True, verbose_name="Codigo")
+    id = models.CharField(max_length = 6, primary_key = True, verbose_name="id")
     nombrePlanta = models.CharField(max_length = 20, verbose_name="Nombre Planta")
     precio = models.CharField(max_length = 20, null = True, blank = True, verbose_name="Precio") 
     idCategoria = models.ForeignKey('Categoria', verbose_name = "Nombre de la categoria", on_delete = models.CASCADE)
-
     
     def __str__ (self):
         return self.nombrePlanta
