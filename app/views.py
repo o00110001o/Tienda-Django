@@ -96,7 +96,12 @@ def login(request):
     return render(request,'login.html')
 
 def productos(request):
-    return render(request,'productos.html')
+    plantas = Planta.objects.all()
+    datos={
+        'plantas' : plantas
+    }
+    
+    return render(request,'productos.html', datos)
 
 def registration(request):
     return render(request,'registration.html')

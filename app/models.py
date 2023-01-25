@@ -15,8 +15,9 @@ class Categoria(models.Model):
 class Planta(models.Model):
     id = models.CharField(max_length = 6, primary_key = True, verbose_name="id")
     nombrePlanta = models.CharField(max_length = 20, verbose_name="Nombre Planta")
+    descripcion = models.CharField(max_length= 255, null= True, verbose_name= "Descripcion")
     precio = models.CharField(max_length = 20, null = True, blank = True, verbose_name="Precio") 
-    idCategoria = models.ForeignKey('Categoria', verbose_name = "Nombre de la categoria", on_delete = models.CASCADE)
+    idCategoria = models.ForeignKey('Categoria', verbose_name = "Nombre categoria", on_delete = models.CASCADE)
     stock = models.IntegerField(null = False, blank = True)
     imagen = models.ImageField(upload_to="productos", null=True)
 
