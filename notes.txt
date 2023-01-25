@@ -45,3 +45,7 @@ alter user Plantas default tablespace users quota unlimited on users;
 ----------------------------------------------------------------------------------------------------------------------
 CRUD DJANGO EXAMPLES
 https://studygyaan.com/django/django-crud-create-retrieve-update-delete-function-based-views
+
+----------------------------------------------------------------------------------------------------------------------
+CARRITO DE COMPRAS
+https://www.youtube.com/watch?v=3L_Wt6rfBvQ
