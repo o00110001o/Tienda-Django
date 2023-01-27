@@ -25,11 +25,11 @@ class Planta(models.Model):
         return self.nombrePlanta
     
 class Usuario(models.Model):
-    nombre = models.CharField(max_length=20)
-    apellido = models.CharField (max_length=20)
-    correo = models.CharField(max_length=20)
-    password = models.CharField(max_length=20)
+    nombre = models.CharField(max_length= 20)
+    apellido = models.CharField (max_length= 20)
+    correo = models.CharField(max_length= 150)
+    contraseña = models.CharField(max_length= 20)
     
     def __str__(self):
-        return self.tipo
+        return self.nombre
     

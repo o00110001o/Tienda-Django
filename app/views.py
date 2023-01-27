@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from app.forms import PlantaForm
-from .models import Planta
+from app.forms import PlantaForm, UsuarioForm
+from .models import Planta, Usuario
 
 # Create your views here.
 def index(request):
@@ -104,7 +104,18 @@ def productos(request):
     return render(request,'productos.html', datos)
 
 def registration(request):
-    return render(request,'registration.html')
+    datos = {
+        'form' : UsuarioForm()
+    }
+
+    if request.method == 'POST':
+        formulario = UsuarioForm(request.POST, files=request.FILES)
+        
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje'] = "Uuario registrado correctamente"
+    
+    return render(request,'registration.html' , datos)
 
 def suscripcion(request):
     return render(request,'suscripcion.html')
