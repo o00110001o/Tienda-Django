@@ -1,15 +1,19 @@
 from django.shortcuts import render
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view,permission_classes,authentication_classes
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 from app.models import Planta
 from .serializers import PlantaSerializer
 from api_app import serializers
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 @csrf_exempt
 @api_view(['GET','POST'])
+@authentication_classes((TokenAuthentication,))
+@permission_classes((IsAuthenticated,))
 
 def lista_plantas(request):
     if request.method == 'GET':
@@ -31,6 +35,9 @@ def lista_plantas(request):
 #--------------------------------------------------------------------------------------------------
 
 @api_view(['GET','PUT','DELETE'])
+@authentication_classes((TokenAuthentication,))
+@permission_classes((IsAuthenticated, ))
+
 def detalle_planta(request, id):
 
     try:
