@@ -29,6 +29,7 @@ class Usuario(models.Model):
     apellido = models.CharField (max_length= 20)
     correo = models.CharField(max_length= 150)
     contraseña = models.CharField(max_length= 20)
+    contraseña2 = models.CharField(max_length= 20, verbose_name=" Reingrese la contraseña")
     
     def __str__(self):
         return self.nombre
